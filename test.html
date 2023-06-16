@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    html,
+    body {
+        margin: 0;
+        padding: 0;
+    }
+
+    .padding--top {
+        padding-top: 50px;
+    }
+
+    .container {
+        display: flex;
+        justify-content: space-around;
+    }
+
+    .container__body {
+        width: 1000px;
+    }
+
+    .container__body--left {
+        position: fixed;
+        height: 100vh;
+        width: inherit;
+    }
+
+    .left__body {
+        background-color: blue;
+        height: inherit;
+        width: 50%;
+    }
+
+    .name {
+        font-size: 40px;
+        font-weight: bold;
+    }
+
+    .bell {
+        font-size: 20px;
+    }
+
+    .bell span {
+        font-weight: bold;
+    }
+
+    .role {
+        font-size: 20px;
+        margin: 20px 0 15px 0;
+        font-weight: bold;
+    }
+
+    .left__body--heading p {
+        max-width: 360px;
+    }
+
+    .container__body--right {
+        height: 100000px;
+        background-color: red;
+        width: 50%;
+        margin-left: 50%;
+    }
+
+    @media only screen and (max-width:1000px) {
+        .container__body {
+            width: 100vw;
+        }
+
+        .container__body--left {
+            position: relative;
+            height: auto;
+        }
+
+        .left__body {
+            width: 100vw;
+        }
+
+        .container__body--right {
+            width: 100vw;
+            margin-left: 0;
+        }
+    }
+</style>
+
+<body>
+    <div class="container">
+        <div class="container__body">
+            <div class="container__body--left">
+                <div class="left__body padding--top">
+                    <div class="left__body--heading">
+                        <div class="name">John Bryan Sampiano</div>
+                        <div class="bell">but you can call me <span>BELL</span></div>
+                        <div class="role">Web Developer</div>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia explicabo fugiat et voluptates
+                            dolorum quod, cupiditate corrupti numquam pariatur error nemo voluptatem. Laboriosam ducimus
+                            cum adipisci totam porro eligendi odit!</p>
+                    </div>
+                    <div class="left__body--navbar"></div>
+                    <div class="left__body--footer"></div>
+                </div>
+            </div>
+            <div class="container__body--right padding--top">
+                <div class="about">
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat doloribus rerum explicabo illum
+                        eaque iste eius recusandae repudiandae perspiciatis, perferendis obcaecati? Maxime, minima
+                        cupiditate dolore hic sapiente dignissimos eum enim!</p>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat doloribus rerum explicabo illum
+                        eaque iste eius recusandae repudiandae perspiciatis, perferendis obcaecati? Maxime, minima
+                        cupiditate dolore hic sapiente dignissimos eum enim!</p>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat doloribus rerum explicabo illum
+                        eaque iste eius recusandae repudiandae perspiciatis, perferendis obcaecati? Maxime, minima
+                        cupiditate dolore hic sapiente dignissimos eum enim!</p>
+                </div>
+                <div class="experience"></div>
+                <div class="projects"></div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
