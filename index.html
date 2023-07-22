@@ -3,9 +3,8 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About BELL</title>
+    <title>Document</title>
 </head>
 <style>
     html,
@@ -14,91 +13,235 @@
         padding: 0;
     }
 
+    .about,
+    .projects,
+    .experience__container {
+        padding: 10px;
+    }
+
+    .padding--top {
+        padding-top: 50px;
+
+    }
+
+    .padding--eft-right {
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+
     .container {
+        display: flex;
+        justify-content: space-around;
+    }
+
+    .container__body {
+        width: 1000px;
+    }
+
+    .container__body--left {
+        position: fixed;
+        height: 100vh;
+        width: 35%;
+    }
+
+    .left__body {
+        /* background-color: blue; */
+        height: inherit;
+        /* width: 50%; */
         /* padding: 10px; */
     }
 
-    .container__left {
-        background-color: red;
-        height: 100vh;
-        max-width: 20vw;
-        position: fixed;
-
-        padding: 5vh 5vw 0 20vw;
+    .name {
+        font-size: 40px;
+        font-weight: bold;
     }
 
-    .container__right {
-        background-color: blue;
-        height: 10000px;
-        margin-left: 45vw;
-        max-width: 30vw;
-
-        padding: 5vh 20vw 0 5vw;
+    .bell {
+        font-size: 20px;
     }
 
-    .projects__box {
-        background-color: blueviolet;
-
+    .bell span {
+        font-weight: bold;
     }
+
+    .role {
+        font-size: 20px;
+        margin: 20px 0 15px 0;
+        font-weight: bold;
+    }
+
+    .left__body--heading p {
+        max-width: 360px;
+    }
+
+    .container__body--right {
+        height: 100000px;
+        /* background-color: red; */
+        width: 55%;
+        margin-left: 45%;
+    }
+
+    /*  */
+    .experience__container {
+        /* background-color: blueviolet; */
+        display: flex;
+        flex-flow: row;
+    }
+
+    .experience__container--image {
+        /* background-color: rgb(226, 43, 43); */
+        /* width: 100%; */
+        /* max-width: 200px; */
+        /* width: 30%; */
+    }
+
+    .experience__container--image img {
+        /* max-width: 200px; */
+        width: 100%;
+        border: 2px solid rgb(191 191 191 / 50%);
+        border-radius: 7px;
+    }
+
+    .experience__container--text {
+        /* background-color: rgb(43, 76, 226); */
+        /* width: 70%; */
+        margin-left: 30px;
+    }
+
+    .experience__container--text_title {
+        font-weight: bolder;
+        font-size: 1.2rem;
+        margin: 0 0 5px 0;
+    }
+
+    .experience__container--tags {
+        /* background-color: black; */
+        margin: 20px 0px 20px 0px;
+        display: flex;
+        /* justify-content: center; */
+        flex-flow: row wrap;
+    }
+
+    .tag {
+        background-color: #a67fff;
+        width: fit-content;
+        padding: 5px 7px 5px 7px;
+        border-radius: 15px;
+        color: white;
+        font-weight: bolder;
+        margin: 0px 5px 5px 5px;
+        font-size: .8em;
+    }
+
 
     @media only screen and (max-width:1000px) {
-        .container__left {
+
+        .about,
+        .projects {
+            padding: 40px;
+        }
+
+        .experience__container {
+            padding: 30px;
+        }
+
+        .container__body {
+            width: 100vw;
+        }
+
+        .container__body--left {
             position: relative;
             height: auto;
-            max-width: 100vw;
         }
 
-        .container__right {
-            margin: 0;
-            max-width: 100vw;
+        .left__body {
+            width: 100vw;
+        }
+
+        .container__body--right {
+            width: 100vw;
+            margin-left: 0;
+        }
+
+        .experience {
+            width: auto;
+            padding: 10px;
         }
     }
-    @media only screen and (min-width:1200px){
-        .container__left {
-        max-width: 20vw;
 
-        padding: 5vh 3vw 0 22vw;
-    }
+    @media only screen and (max-width:670px) {
+        .experience__container {
+            flex-direction: column-reverse;
+        }
 
-    .container__right {
-        max-width: 30vw;
+        .experience__container--text {
+            width: 100%;
+            margin-left: 0;
+        }
 
-        padding: 5vh 22vw 0 3vw;
-    }
     }
 </style>
 
 <body>
     <div class="container">
-        <div class="container__left">
-            <div class="heading">
-                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Tempora possimus accusamus, culpa est iure
-                beatae
-                id dolores perspiciatis odit reiciendis, aperiam suscipit sit, explicabo ipsum incidunt. Quo fuga
-                voluptates
-                dolorum.
-            </div>
-        </div>
-        <div class="container__right">
-            <class class="about">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatem, nihil eveniet voluptate facere
-                ullam
-                atque, possimus deleniti dolore dolorem dolores accusamus. Cupiditate eligendi soluta quisquam ducimus
-                dicta
-                expedita consequatur nulla!
-            </class>
-
-            <div class="projects">
-                <div class="projects__box">
-                    <div class="projects__box--left">
-
+        <div class="container__body">
+            <div class="container__body--left">
+                <div class="left__body">
+                    <div class="left__body--heading">
+                        <div class="name">John Bryan Sampiano</div>
+                        <div class="bell">but you can call me <span>BELL</span></div>
+                        <div class="role">Web Developer</div>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia explicabo fugiat et voluptates
+                            dolorum quod, cupiditate corrupti numquam pariatur error nemo voluptatem. Laboriosam ducimus
+                            cum adipisci totam porro eligendi odit!</p>
                     </div>
-                    <div class="projects__box--right">
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Error sit dolorem nulla quia odit,
-                        velit assumenda nobis excepturi itaque quidem dicta tempora voluptatum dignissimos ipsam
-                        laborum. Debitis eum veniam laborum.
+                    <div class="left__body--navbar"></div>
+                    <div class="left__body--footer"></div>
+                </div>
+            </div>
+            <div class="container__body--right">
+                <div class="about">
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat doloribus rerum explicabo illum
+                        eaque iste eius recusandae repudiandae perspiciatis, perferendis obcaecati? Maxime, minima
+                        cupiditate dolore hic sapiente dignissimos eum enim!</p>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat doloribus rerum explicabo illum
+                        eaque iste eius recusandae repudiandae perspiciatis, perferendis obcaecati? Maxime, minima
+                        cupiditate dolore hic sapiente dignissimos eum enim!</p>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat doloribus rerum explicabo illum
+                        eaque iste eius recusandae repudiandae perspiciatis, perferendis obcaecati? Maxime, minima
+                        cupiditate dolore hic sapiente dignissimos eum enim!</p>
+                </div>
+                <div class="experience">
+                    <div class="experience__container">
+                        <div class="experience__container--image">
+                            <img src="crying.jpg" alt="crying_cat">
+                        </div>
+                        <div class="experience__container--text">
+                            <h3 class="experience__container--text_title">Title test</h3>
+                            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quae facilis unde saepe dolores
+                            ullam, odio placeat, dolorem eos corporis quisquam doloribus dolore, earum eveniet
+                            cupiditate dicta facere explicabo dignissimos esse.
+                            <div class="experience__container--tags">
+                                <div class="tag">
+                                    JAVA
+                                </div>
+                                <div class="tag">
+                                    HTML
+                                </div>
+                                <div class="tag">
+                                    CSS/SCSS
+                                </div>
+                                <div class="tag">
+                                    JAVASCRIPT
+                                </div>
+                                <div class="tag">
+                                    JAVA
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
+                <div class="projects"></div>
             </div>
         </div>
     </div>
