@@ -14,7 +14,8 @@
     }
 
     .about,
-    .projects,
+    .experience,
+    .project__container,
     .experience__container {
         padding: 10px;
     }
@@ -81,40 +82,63 @@
         margin-left: 45%;
     }
 
+    .left__body--footer {
+        position: fixed;
+        bottom: 0;
+        margin-bottom: 120px;
+    }
+
+    .left__body--footer img {
+        height: 35px;
+        width: 35px;
+        margin-right: 10px;
+    }
+
     /*  */
+    .project__container--year{
+        min-width: 75px;
+    }
+    .project__container,
     .experience__container {
         /* background-color: blueviolet; */
         display: flex;
         flex-flow: row;
+        margin: 25px 0 25px 0;
     }
 
-    .experience__container--image {
+    .project__container:hover,
+    .experience__container:hover {
+        background-color: rgba(0, 0, 0, .08);
+        border-radius: 7px;
+    }
+
+    .project__container--image {
         /* background-color: rgb(226, 43, 43); */
         /* width: 100%; */
         /* max-width: 200px; */
         /* width: 30%; */
     }
 
-    .experience__container--image img {
+    .project__container--image img {
         /* max-width: 200px; */
         width: 100%;
         border: 2px solid rgb(191 191 191 / 50%);
         border-radius: 7px;
     }
 
-    .experience__container--text {
+    .project__container--text {
         /* background-color: rgb(43, 76, 226); */
         /* width: 70%; */
         margin-left: 30px;
     }
 
-    .experience__container--text_title {
+    .project__container--text_title {
         font-weight: bolder;
         font-size: 1.2rem;
         margin: 0 0 5px 0;
     }
 
-    .experience__container--tags {
+    .project__container--tags {
         /* background-color: black; */
         margin: 20px 0px 20px 0px;
         display: flex;
@@ -134,15 +158,28 @@
     }
 
 
-    @media only screen and (max-width:1000px) {
-
-        .about,
-        .projects {
-            padding: 40px;
+    @media only screen and (max-width:1040px) {
+        .left__body--footer {
+            position: relative;
+            margin-bottom: 0;
         }
 
-        .experience__container {
-            padding: 30px;
+        .left__body--heading p {
+            width: 100%;
+            max-width: 900px;
+        }
+
+        /*  */
+
+        .about{
+            padding: 40px 20px 20px 20px;
+        }
+        .experience {
+            padding: 40px 20px 20px 20px;
+        }
+
+        .project__container {
+            /* padding: 20px; */
         }
 
         .container__body {
@@ -152,10 +189,13 @@
         .container__body--left {
             position: relative;
             height: auto;
+            /* width: 100%; */
+            /* padding: 20px 40px 0 40px; */
         }
 
         .left__body {
-            width: 100vw;
+            width: 87vw;
+            padding: 20px;
         }
 
         .container__body--right {
@@ -163,18 +203,21 @@
             margin-left: 0;
         }
 
-        .experience {
+        .project {
             width: auto;
             padding: 10px;
         }
     }
 
     @media only screen and (max-width:670px) {
-        .experience__container {
+        .experience__container{
+            display: block;
+        }
+        .project__container {
             flex-direction: column-reverse;
         }
 
-        .experience__container--text {
+        .project__container--text {
             width: 100%;
             margin-left: 0;
         }
@@ -193,10 +236,23 @@
                         <div class="role">Web Developer</div>
                         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia explicabo fugiat et voluptates
                             dolorum quod, cupiditate corrupti numquam pariatur error nemo voluptatem. Laboriosam ducimus
+                            cum adipisci totam porro eligendi odit!Lorem ipsum dolor sit amet consectetur adipisicing
+                            elit. Quia explicabo fugiat et voluptates
+                            dolorum quod, cupiditate corrupti numquam pariatur error nemo voluptatem. Laboriosam ducimus
+                            cum adipisci totam porro eligendi odit!Lorem ipsum dolor sit amet consectetur adipisicing
+                            elit. Quia explicabo fugiat et voluptates
+                            dolorum quod, cupiditate corrupti numquam pariatur error nemo voluptatem. Laboriosam ducimus
                             cum adipisci totam porro eligendi odit!</p>
                     </div>
                     <div class="left__body--navbar"></div>
-                    <div class="left__body--footer"></div>
+                    <div class="left__body--footer">
+                        <a href="https://github.com/brysampi" target="_blank"><img src="svg/github-480.svg"
+                                alt="github"></a>
+                        <img src="svg/linkedin-480.svg" alt="">
+                        <img src="svg/twitter-480.svg" alt="">
+                        <img src="svg/instagram-480.svg" alt="">
+                        <img src="svg/watsapp-480.svg" alt="">
+                    </div>
                 </div>
             </div>
             <div class="container__body--right">
@@ -211,17 +267,17 @@
                         eaque iste eius recusandae repudiandae perspiciatis, perferendis obcaecati? Maxime, minima
                         cupiditate dolore hic sapiente dignissimos eum enim!</p>
                 </div>
-                <div class="experience">
-                    <div class="experience__container">
-                        <div class="experience__container--image">
+                <div class="project">
+                    <div class="project__container">
+                        <div class="project__container--image">
                             <img src="crying.jpg" alt="crying_cat">
                         </div>
-                        <div class="experience__container--text">
-                            <h3 class="experience__container--text_title">Title test</h3>
+                        <div class="project__container--text">
+                            <h3 class="project__container--text_title">Title test</h3>
                             Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quae facilis unde saepe dolores
                             ullam, odio placeat, dolorem eos corporis quisquam doloribus dolore, earum eveniet
                             cupiditate dicta facere explicabo dignissimos esse.
-                            <div class="experience__container--tags">
+                            <div class="project__container--tags">
                                 <div class="tag">
                                     JAVA
                                 </div>
@@ -237,11 +293,182 @@
                                 <div class="tag">
                                     JAVA
                                 </div>
+                                <div class="tag">
+                                    asdasdasdasdasd
+                                </div>
+                                <div class="tag">
+                                    dfgdfgdfgdfg
+                                </div>
+                                <div class="tag">
+                                    dfgetygerttret
+                                </div>
+                                <div class="tag">
+                                    cvdfgdfgdfgdfgdfg
+                                </div>
+                                <div class="tag">
+                                    JAddfgdfgdfgdfggghgrhVA
+                                </div>
+                                <div class="tag">
+                                    JAVhrthefgegA
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project__container">
+                        <div class="project__container--image">
+                            <img src="crying.jpg" alt="crying_cat">
+                        </div>
+                        <div class="project__container--text">
+                            <h3 class="project__container--text_title">Title test</h3>
+                            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quae facilis unde saepe dolores
+                            ullam, odio placeat, dolorem eos corporis quisquam doloribus dolore, earum eveniet
+                            cupiditate dicta facere explicabo dignissimos esse.
+                            <div class="project__container--tags">
+                                <div class="tag">
+                                    JAVA
+                                </div>
+                                <div class="tag">
+                                    HTML
+                                </div>
+                                <div class="tag">
+                                    CSS/SCSS
+                                </div>
+                                <div class="tag">
+                                    JAVASCRIPT
+                                </div>
+                                <div class="tag">
+                                    JAVA
+                                </div>
+                                <div class="tag">
+                                    asdasdasdasdasd
+                                </div>
+                                <div class="tag">
+                                    dfgdfgdfgdfg
+                                </div>
+                                <div class="tag">
+                                    dfgetygerttret
+                                </div>
+                                <div class="tag">
+                                    cvdfgdfgdfgdfgdfg
+                                </div>
+                                <div class="tag">
+                                    JAddfgdfgdfgdfggghgrhVA
+                                </div>
+                                <div class="tag">
+                                    JAVhrthefgegA
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project__container">
+                        <div class="project__container--image">
+                            <img src="crying.jpg" alt="crying_cat">
+                        </div>
+                        <div class="project__container--text">
+                            <h3 class="project__container--text_title">Title test</h3>
+                            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quae facilis unde saepe dolores
+                            ullam, odio placeat, dolorem eos corporis quisquam doloribus dolore, earum eveniet
+                            cupiditate dicta facere explicabo dignissimos esse.
+                            <div class="project__container--tags">
+                                <div class="tag">
+                                    JAVA
+                                </div>
+                                <div class="tag">
+                                    HTML
+                                </div>
+                                <div class="tag">
+                                    CSS/SCSS
+                                </div>
+                                <div class="tag">
+                                    JAVASCRIPT
+                                </div>
+                                <div class="tag">
+                                    JAVA
+                                </div>
+                                <div class="tag">
+                                    asdasdasdasdasd
+                                </div>
+                                <div class="tag">
+                                    dfgdfgdfgdfg
+                                </div>
+                                <div class="tag">
+                                    dfgetygerttret
+                                </div>
+                                <div class="tag">
+                                    cvdfgdfgdfgdfgdfg
+                                </div>
+                                <div class="tag">
+                                    JAddfgdfgdfgdfggghgrhVA
+                                </div>
+                                <div class="tag">
+                                    JAVhrthefgegA
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project__container">
+                        <div class="project__container--image">
+                            <img src="crying.jpg" alt="crying_cat">
+                        </div>
+                        <div class="project__container--text">
+                            <h3 class="project__container--text_title">Title test</h3>
+                            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quae facilis unde saepe dolores
+                            ullam, odio placeat, dolorem eos corporis quisquam doloribus dolore, earum eveniet
+                            cupiditate dicta facere explicabo dignissimos esse.
+                            <div class="project__container--tags">
+                                <div class="tag">
+                                    JAVA
+                                </div>
+                                <div class="tag">
+                                    HTML
+                                </div>
+                                <div class="tag">
+                                    CSS/SCSS
+                                </div>
+                                <div class="tag">
+                                    JAVASCRIPT
+                                </div>
+                                <div class="tag">
+                                    JAVA
+                                </div>
+                                <div class="tag">
+                                    asdasdasdasdasd
+                                </div>
+                                <div class="tag">
+                                    dfgdfgdfgdfg
+                                </div>
+                                <div class="tag">
+                                    dfgetygerttret
+                                </div>
+                                <div class="tag">
+                                    cvdfgdfgdfgdfgdfg
+                                </div>
+                                <div class="tag">
+                                    JAddfgdfgdfgdfggghgrhVA
+                                </div>
+                                <div class="tag">
+                                    JAVhrthefgegA
+                                </div>
+
                             </div>
                         </div>
                     </div>
                 </div>
-                <div class="projects"></div>
+                <div class="experience">
+                    <div class="experience__container">
+                        <div class="project__container--year">
+                            2023-2023
+                        </div>
+                        <div class="project__container--text">
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam sunt excepturi quo, nemo
+                            minima error beatae, unde assumenda expedita consequuntur ipsam ratione quas fugit accusamus
+                            placeat maiores quidem quibusdam. Distinctio.
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
