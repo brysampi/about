@@ -4,9 +4,33 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>About Me</title>
 </head>
 <style>
+    :root {
+        /* --CardBackgroundColor: #ffbb1a; */
+        /* --CardBackgroundColor: #e1e1e1; */
+        /* --CardBackgroundColor: #fed140; */
+        /* --CardBackgroundColor: #fbe34d; */
+        /* --CardBackgroundColor: #353537; */
+        --CardBackgroundColor: #2f2822;
+        /* --textMainColor: rgba(0, 0, 0, 0.7); */
+        /* --textMainColor: rgb(255, 255, 255); */
+        /* --textMainColor: #ffe8b2; */
+        --textMainColor: #ffe59ea4;
+        /* --textMainSpecialColor: #ffd980; */
+        --textMainSpecialColor: #ffc962;
+        /* --textTitleSubs: rgba(0, 0, 0, 0.6); */
+        /* --textTitleSubs: #ffe8b2; */
+        --textTitleSubs: #ffe59e;
+        /* --tagColor: #ffe8b2; */
+        /* --tagColor: #ffe59e; */
+        --tagColor: #ff8f00;
+        /* --tagBackgroundColor: #f48200; */
+        /* --tagBackgroundColor: #f19827; */
+        --tagBackgroundColor: #6f3e00e8;
+    }
+
     .light {
         position: fixed;
         left: 0;
@@ -22,7 +46,8 @@
         /* background-image: linear-gradient(180deg, #ffbb1a 0%, #ffda2a 100%); */
         /* background-color: white; */
         /* background: radial-gradient(circle at var(--x) var(--y), rgba(255, 186, 26, 0) 20%, rgba(255, 255, 255, 0.26) 50%); */
-        background: radial-gradient(circle at var(--x) var(--y), rgb(255 255 255 / 7%) 20%, rgb(255 255 255 / 19%) 40%);
+        /* background: radial-gradient(circle at var(--x) var(--y), rgb(255 255 255 / 7%) 20%, rgb(255 255 255 / 19%) 40%); */
+        background: radial-gradient(circle at var(--x) var(--y), #30344073 5%, #1c1d1fd9 50%);
         z-index: 0;
     }
 
@@ -39,14 +64,14 @@
         /* backdrop-filter: blur(3px); */
     }
 
-    .container__body {
-        /* background-image: linear-gradient(360deg, #ffbb1a 0%, #ffda2a 100%); */
-        /* background-color: #ffbb1a; */
-        padding: 0 50px;
-        z-index: 1;
-        /* background: radial-gradient(circle at var(--x) var(--y), rgb(255 255 255 / 7%) 20%, rgb(255 255 255 / 19%) 40%); */
-        background: radial-gradient(circle at var(--x2) var(--y2), rgb(255, 197, 100) 30px, #ffba1a 5px);
-        /* translate: left; */
+    .text_title {
+        /* color: #ffbb1a; */
+        color: var(--textMainSpecialColor);
+        text-decoration: none;
+    }
+
+    .no_link {
+        cursor: not-allowed;
     }
 
     html,
@@ -56,11 +81,53 @@
         /* background-color: #ffbb1a; */
         /* background-image: linear-gradient(to bottom right, #ffbb1a, #ffda2a); */
         /* background: linear-gradient(180deg,#ffbb1a 0%, #ffda2a 100%); */
-        color: black;
-        /* color: white; */
+        /* color: black; */
 
+        /* color: white; */
+        font-family: helvetica;
+        font-weight: 400;
+        scroll-behavior: smooth;
+        /* font-size: 1rem; */
 
     }
+
+    .container__body {
+        /* background-image: linear-gradient(360deg, #ffbb1a 0%, #ffda2a 100%); */
+        background-color: var(--CardBackgroundColor);
+        /* background-color: #e1e1e1; */
+        padding: 0 50px;
+        z-index: 1;
+        /* background: radial-gradient(circle at var(--x) var(--y), rgb(255 255 255 / 7%) 20%, rgb(255 255 255 / 19%) 40%); */
+        /* background: radial-gradient(circle at var(--x2) var(--y2), rgb(255, 197, 100) 30px, #ffba1a 5px); */
+        /* translate: left; */
+        font-weight: 500;
+        width: 1000px;
+    }
+
+
+    /* Text Color */
+    body,
+    .text__maincolor {
+        color: var(--textMainColor);
+        text-decoration: none;
+    }
+
+    .text__title--bold {
+        font-weight: bold;
+    }
+
+
+    .text__title--subs {
+        color: var(--textTitleSubs);
+    }
+
+    /* Text Color */
+    /*  */
+    .text__info {
+        font-size: .9rem;
+    }
+
+    /*  */
 
     .container__body--left,
     .container__body--right {
@@ -75,7 +142,7 @@
     }
 
     .container__body--right {
-        height: 100000px;
+        /* height: 100000px; */
         /* background-color: red; */
         width: 55%;
         margin-left: 45%;
@@ -84,9 +151,14 @@
     .about,
     .experience,
     .project__card,
-    .experience__container {
+    .experience__card {
         padding: 10px;
     }
+
+    /* .project a {
+        text-decoration: none;
+        color: black;
+    } */
 
     .padding--top {
         padding-top: 50px;
@@ -104,9 +176,7 @@
 
     }
 
-    .container__body {
-        width: 1000px;
-    }
+
 
 
 
@@ -120,6 +190,7 @@
     .name {
         font-size: 40px;
         font-weight: bold;
+        color: var(--textMainSpecialColor);
     }
 
     .bell {
@@ -128,19 +199,65 @@
 
     .bell span {
         font-weight: bold;
+        color: var(--textMainSpecialColor);
     }
 
     .role {
         font-size: 20px;
         margin: 20px 0 15px 0;
-        font-weight: bold;
+        /* font-weight: bold; */
     }
 
     .left__body--heading p {
         max-width: 360px;
     }
 
+    /* Navbar */
+    .left__body--navbar {
+        display: block;
+        margin-top: 70px;
+    }
 
+    .left__body--navbar ul {
+        text-decoration: none;
+        list-style-type: none;
+    }
+
+    .left__body--navbar ul li {
+        margin: 15px 0;
+        text-decoration: none;
+        opacity: .7;
+
+        & a {
+            text-decoration: none;
+            color: var(--textMainColor);
+        }
+
+        & hr {
+            width: 2rem;
+            display: inline-flex;
+            margin-right: 10px;
+        }
+    }
+
+    .navbar--active {
+        opacity: 1 !important;
+
+        & hr {
+            width: 4rem !important;
+        }
+
+        & a {
+            /* color: var(--textMainSpecialColor) !important; */
+            color: var(--tagColor) !important;
+        }
+    }
+
+    .navbar__title {
+        display: none;
+    }
+
+    /* Navbar */
 
     .left__body--footer {
         position: fixed;
@@ -158,18 +275,24 @@
         text-decoration: none;
     }
 
-    .left__body--footer:hover>.left__body--footer a:not(:hover) {
+    /* .left__body--footer:hover>.left__body--footer a:not(:hover) {
         filter: blur(10px);
         transform: scale(0.9, 0.9);
-    }
+    } */
 
     /*  */
-    .experience__container--year {
-        min-width: 75px;
+    .experience__card--year {
+        min-width: 104px;
+        /* font-weight: bolder; */
+        font-size: .8rem;
+        margin: 0 0 5px 0;
+        display: flex;
+        /* align-items: center; */
     }
 
+
     .project__card,
-    .experience__container {
+    .experience__card {
         /* background-color: blueviolet; */
         display: flex;
         flex-flow: row;
@@ -178,22 +301,53 @@
     }
 
     .project__card:hover,
-    .experience__container:hover {
-        background: linear-gradient(180deg,
+    .experience__card:hover {
+        /* background: linear-gradient(180deg,
                 rgba(255, 255, 255, .4) 0%,
                 rgba(255, 255, 255, .2) 1%,
                 rgba(255, 255, 255, .1) 2%,
-                rgba(255, 255, 255, .1) 100%);
+                rgba(255, 255, 255, .1) 100%); */
+        background: linear-gradient(180deg, rgba(255, 255, 255, .1) 100%, rgba(255, 255, 255, .1) 100%);
+        /* inset = for inner shadow */
+        box-shadow: 0px 0px 3px rgba(46, 46, 46, 0.250), inset 0px 2px 5px 0 rgba(255, 255, 255, .4), inset 0px -1px 2px 0 rgba(0, 0, 0, .2);
         /* background-color: rgba(255, 255, 255, 0.04); */
         /* box-shadow: 15px 15px 30px rgba(34, 34, 34, 0.1),
             -15px -15px 30px rgba(0, 0, 0, 0.08); */
-        box-shadow: 0px 0px 3px rgba(46, 46, 46, 0.250);
+        /* box-shadow: 0px 0px 3px rgba(46, 46, 46, 0.250); */
     }
 
-    .project__card:hover .project__card--image img {
-        border: 2px solid rgb(0, 0, 0);
-        transition: all ease-in-out .2s;
+    .project__card:hover,
+    .experience__card:hover {
+        & .project__card--image img {
+            border: 2px solid rgba(211, 211, 211, 0.753);
+            transition: all ease-in-out .2s;
+        }
+
+        & .text_title {
+            color: var(--tagColor);
+        }
+
+        /* >.project a:not(:hover) {
+            filter: blur(10px);
+            transform: scale(0.9, 0.9);
+        } */
     }
+
+    /* Hovering Blur */
+    .section--card__hover--opacity a {
+        transition: 400ms;
+    }
+
+    /* Lower the opacity of those not pointed in DIV */
+    .section--card__hover--opacity:hover>a:not(:hover) {
+        /* filter: blur(2px); */
+        /* transform: scale(0.9, 0.9); */
+        opacity: .5;
+    }
+
+    /* Hovering Blur */
+
+
 
     /* .project__card:hover {
         border-radius: 30px;
@@ -215,24 +369,39 @@
         border: 2px solid rgb(191 191 191 / 0%);
         border-radius: 7px;
         /* transition: all ease-in-out .2s; */
+        /* max-width: 173px;
+        max-height: 99px; */
+        max-width: 800px;
+        max-height: 450px;
+        min-width: 164px;
+        min-height: 84px;
     }
 
 
     .project__card--text,
-    .experience__container--text {
+    .experience__card--text {
         /* background-color: rgb(43, 76, 226); */
         /* width: 70%; */
         margin-left: 30px;
     }
 
     .project__card--text_title,
-    .experience__container--text_title {
-        font-weight: bolder;
-        font-size: 1.2rem;
+    .experience__card--text_title {
+        /* font-weight: bolder; */
+        font-size: 1rem;
         margin: 0 0 5px 0;
     }
 
-    .project__card--tags {
+    .project__card--text_title_sub,
+    .experience__card--text_title_sub {
+        /*  */
+        margin: 0;
+        font-size: 14px;
+    }
+
+
+    .project__card--tags,
+    .experience__card--tags {
         /* background-color: black; */
         margin: 20px 0px 20px 0px;
         display: flex;
@@ -241,19 +410,25 @@
     }
 
     .tag {
-        background-color: #a67fff;
+        background-color: var(--tagBackgroundColor);
         width: fit-content;
-        padding: 5px 7px 5px 7px;
+        padding: 6px 12px;
         border-radius: 15px;
-        color: white;
+        color: var(--tagColor);
         font-weight: bolder;
-        margin: 0px 5px 5px 5px;
+        margin: 0 4px;
         font-size: .8em;
+        box-shadow: 0px 0px 5px rgba(46, 46, 46, .3);
+    }
+
+    .footer {
+        margin: 100px 0;
     }
 
 
     @media only screen and (max-width:1040px) {
 
+        /* navbar */
         .container__body--left,
         .container__body--right {
             margin-top: 0vh;
@@ -269,7 +444,15 @@
             max-width: 900px;
         }
 
-        /*  */
+        .left__body--navbar {
+            display: none;
+        }
+
+        .navbar__title {
+            display: block;
+        }
+
+        /* navbar */
 
         .about {
             padding: 40px 20px 20px 20px;
@@ -311,7 +494,7 @@
     }
 
     @media only screen and (max-width:670px) {
-        .experience__container {
+        .experience__card {
             display: block;
         }
 
@@ -324,11 +507,20 @@
             margin-left: 0;
         }
 
-        /* .experience__container--year {
+        .experience__card--text {
+            margin-left: 0px;
+        }
+
+        /* .experience__card--year {
             font-weight: bolder;
             font-size: 1.2rem;
         } */
 
+    }
+
+    @font-face {
+        font-family: helvetica;
+        src: url("font/helvetica/Helvetica.ttf") format("opentype");
     }
 </style>
 
@@ -341,25 +533,30 @@
                 <div class="left__body">
                     <div class="left__body--heading">
                         <div class="name">John Bryan Sampiano</div>
-                        <div class="bell">but you can call me <span>BELL</span></div>
-                        <div class="role">Web Developer</div>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia explicabo fugiat et
-                            voluptates
-                            dolorum quod, cupiditate corrupti numquam pariatur error nemo voluptatem. Laboriosam
-                            ducimus
-                            cum adipisci totam porro eligendi odit!Lorem ipsum dolor sit amet consectetur
-                            adipisicing
-                            elit. Quia explicabo fugiat et voluptates
-                            dolorum quod, cupiditate corrupti numquam pariatur error nemo voluptatem. Laboriosam
-                            ducimus
-                            cum adipisci totam porro eligendi odit!Lorem ipsum dolor sit amet consectetur
-                            adipisicing
-                            elit. Quia explicabo fugiat et voluptates
-                            dolorum quod, cupiditate corrupti numquam pariatur error nemo voluptatem. Laboriosam
-                            ducimus
-                            cum adipisci totam porro eligendi odit!</p>
+                        <div class="bell text__title--subs">but you can call me <span>BELL</span></div>
+                        <div class="role text_title">Web Developer</div>
+                        <!-- <p>
+                            I build accessible, inclusive products and digital experiences for the web.
+                        </p> -->
+                        <p>
+                            As a web developer, building digital experiences is very close to my heart
+                        </p>
                     </div>
-                    <div class="left__body--navbar"></div>
+                    <div class="left__body--navbar text__info">
+                        <ul>
+                            <li class="navbar--about navbar--active" id="navbar--about"
+                                onclick="remove_active('navbar--about')">
+                                <hr><a href="#about">ABOUT</a>
+                            </li>
+                            <li class="navbar--experience" id="navbar--experience"
+                                onclick="remove_active('navbar--experience')">
+                                <hr><a href="#experience">EXPERIENCE</a>
+                            </li>
+                            <li class="navbar--project" id="navbar--project" onclick="remove_active('navbar--project')">
+                                <hr><a href="#project">PROJECT</a>
+                            </li>
+                        </ul>
+                    </div>
                     <div class="left__body--footer">
                         <a href="https://github.com/brysampi" target="_blank">
                             <img src="svg/github-480.svg" alt="github">
@@ -367,13 +564,13 @@
                         <a href="https://www.linkedin.com/in/bryansampiano/" target="_blank">
                             <img src="svg/linkedin-480.svg" alt="">
                         </a>
-                        <a href="https://www.linkedin.com/in/bryansampiano/" target="_blank">
+                        <a href="#" class="no_link" target="_blank">
                             <img src="svg/twitter-480.svg" alt="">
                         </a>
-                        <a href="https://www.linkedin.com/in/bryansampiano/" target="_blank">
+                        <a href="#" class="no_link" target="_blank">
                             <img src="svg/instagram-480.svg" alt="">
                         </a>
-                        <a href="https://www.linkedin.com/in/bryansampiano/" target="_blank">
+                        <a href="#" class="no_link" target="_blank">
                             <img src="svg/watsapp-480.svg" alt="">
                         </a>
 
@@ -383,104 +580,302 @@
                 </div>
             </div>
             <div class="container__body--right">
-                <div class="about">
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat doloribus rerum explicabo
-                        illum
-                        eaque iste eius recusandae repudiandae perspiciatis, perferendis obcaecati? Maxime, minima
-                        cupiditate dolore hic sapiente dignissimos eum enim!</p>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat doloribus rerum explicabo
-                        illum
-                        eaque iste eius recusandae repudiandae perspiciatis, perferendis obcaecati? Maxime, minima
-                        cupiditate dolore hic sapiente dignissimos eum enim!</p>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat doloribus rerum explicabo
-                        illum
-                        eaque iste eius recusandae repudiandae perspiciatis, perferendis obcaecati? Maxime, minima
-                        cupiditate dolore hic sapiente dignissimos eum enim!</p>
+                <!-- about -->
+                <div class="about section" id="about">
+                    <div class="about__title text_title navbar__title">ABOUT</div>
+                    <p>
+                        I'm a <span><a href="https://brysampi.github.io/" target="_blank" class="text_title">web
+                                developer</a></span> who has a strong passion for creating digital experiences. I've had
+                        the
+                        privilege of constructing web projects for a <span><a href="https://stdominiccollege.edu.ph/"
+                                target="_blank" class="text_title">School</a></span>
+                        to make things simple for
+                        students, from
+                        enrollment to subject management.
+                    </p>
+                    <!-- <p>
+                        When I realized the wonder of creating code that makes websites come to life, I started on the
+                        path of becoming a <span><a href="https://brysampi.github.io/"
+                            target="_blank" class="text_title">web developer</a></span>. The creative process of
+                        transforming concepts into interactive
+                        and aesthetically pleasing reality is what I find most exciting about web development. I've
+                        developed my expertise in both front-end and back-end technologies over the years, including
+                        HTML, CSS, JavaScript, and PHP.
+                    </p> -->
+                    <p>
+                        I began my career as a <span><a href="https://brysampi.github.io/" target="_blank"
+                                class="text_title">web developer</a></span> when I recognised the magic of writing code
+                        that brings
+                        websites to life. The creative process of turning ideas into interactive, visually beautiful
+                        realities is what I find most intriguing about web development. Over the years, I've honed my
+                        skills in front-end and back-end technologies like HTML, CSS, JavaScript, and PHP.
+                    </p>
                 </div>
-                <div class="project">
-                    <a href="">
-                        <div class="project__card">
-                            <div class="project__card--image">
-                                <img src="image/crying.jpg" alt="crying_cat">
+                <!-- about -->
+                <!-- experience -->
+                <div class="experience section section--card__hover--opacity" id="experience">
+                    <div class="experience__title text_title navbar__title">EXPERIENCE</div>
+                    <!-- Card -->
+                    <a href="#" class="experience__link text__maincolor">
+                        <div class="experience__card">
+                            <div class="experience__card--year text__title--subs text__info">
+                                FEB 2023 - FEB 2023
                             </div>
-                            <div class="project__card--text">
-                                <h3 class="project__card--text_title">Title test</h3>
-                                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quae facilis unde saepe
-                                dolores
-                                ullam, odio placeat, dolorem eos corporis quisquam doloribus dolore, earum eveniet
-                                cupiditate dicta facere explicabo dignissimos esse.
-                                <div class="project__card--tags">
-                                    <div class="tag">
-                                        JAVA
-                                    </div>
-                                    <div class="tag">
-                                        HTML
-                                    </div>
-                                    <div class="tag">
-                                        CSS/SCSS
-                                    </div>
-                                    <div class="tag">
-                                        JAVASCRIPT
-                                    </div>
-                                    <div class="tag">
-                                        JAVA
-                                    </div>
-                                    <div class="tag">
-                                        asdasdasdasdasd
-                                    </div>
-                                    <div class="tag">
-                                        dfgdfgdfgdfg
-                                    </div>
-                                    <div class="tag">
-                                        dfgetygerttret
-                                    </div>
-                                    <div class="tag">
-                                        cvdfgdfgdfgdfgdfg
-                                    </div>
-                                    <div class="tag">
-                                        JAddfgdfgdfgdfggghgrhVA
-                                    </div>
-                                    <div class="tag">
-                                        JAVhrthefgegA
-                                    </div>
+                            <div class="experience__card--text">
+                                <h3 class="experience__card--text_title text_title">Web Development Engineer</h3>
+                                <p class="experience__card--text_title_sub">St.Dominic College of Asia</p>
+                                <div class="text__info">
+                                    <p>
+                                        Developed various websites for Student and Employees using Codeigniter 3
+                                        Framework.
+                                    </p>
+                                    <p>
+                                        Convert all old system(.NET) modules to Web based System.
+                                    </p>
 
+                                    <p>
+                                        One of the developers created DOSE (Dominican One Stop Enrollment) /
+                                        Admission
+                                    </p>
+                                    <p>
+                                        Collaborates with the team and creates presentations for my task when there's
+                                        an
+                                        update in the system.
+                                    </p>
+
+                                    <div class="experience__card--tags">
+                                        <div class="tag">
+                                            CodeIgniter
+                                        </div>
+                                        <div class="tag">
+                                            PHP
+                                        </div>
+                                        <div class="tag">
+                                            CSS
+                                        </div>
+                                        <div class="tag">
+                                            Javascript
+                                        </div>
+                                        <div class="tag">
+                                            JQuery
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
                         </div>
                     </a>
-
+                    <!-- Card -->
+                    <a href="javascript:void(0)" class="experience__link text__maincolor no_link">
+                        <div class="experience__card">
+                            <div class="experience__card--year text__title--subs">
+                                JAN - SEPT 2019
+                            </div>
+                            <div class="experience__card--text">
+                                <h3 class="experience__card--text_title text_title">Intern : Web Developer</h3>
+                                <p class="experience__card--text_title_sub">TSPG IT Solutions</p>
+                                <p>
+                                    Developed different websites with software division team for clients using Symfony 3
+                                    framework.
+                                </p>
+                                <div class="experience__card--tags">
+                                    <div class="tag">
+                                        Symfony
+                                    </div>
+                                    <div class="tag">
+                                        PHP
+                                    </div>
+                                    <div class="tag">
+                                        SCSS/SASS
+                                    </div>
+                                    <div class="tag">
+                                        Javascript
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
                 </div>
-                <div class="experience">
-                    <div class="experience__container">
-                        <div class="experience__container--year">
-                            2023-2023
+                <!-- experience -->
+                <!-- project -->
+                <div class="project section section--card__hover--opacity" id="project">
+                    <div class="project__title text_title navbar__title">PROJECT</div>
+                    <!-- Card -->
+                    <a href="#" class="project__link text__maincolor">
+                        <div class="project__card">
+                            <div class="project__card--image">
+                                <img src="image/onestop.png" alt="onestop">
+                            </div>
+                            <div class="project__card--text">
+                                <h3 class="project__card--text_title text_title">Addmission Portal</h3>
+                                <p class="project__card--text_title_sub">Onestop · DOSE</p>
+                                <p>
+                                    Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quae facilis unde saepe
+                                    dolores
+                                    ullam, odio placeat, dolorem eos corporis quisquam doloribus dolore, earum eveniet
+                                    cupiditate dicta facere explicabo dignissimos esse.
+                                </p>
+                                <div class="project__card--tags">
+                                    <div class="tag">
+                                        PHP
+                                    </div>
+                                    <div class="tag">
+                                        CSS
+                                    </div>
+                                    <div class="tag">
+                                        Javascript
+                                    </div>
+                                    <div class="tag">
+                                        CodeIgniter
+                                    </div>
+                                </div>
+                            </div>
                         </div>
-                        <div class="experience__container--text">
-                            <h3 class="experience__container--text_title">Title test</h3>
-                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam sunt excepturi quo,
-                            nemo
-                            minima error beatae, unde assumenda expedita consequuntur ipsam ratione quas fugit
-                            accusamus
-                            placeat maiores quidem quibusdam. Distinctio.
+                    </a>
+                    <!-- Card -->
+                    <a href="#" class="project__link text__maincolor">
+                        <div class="project__card">
+                            <div class="project__card--image">
+                                <img src="image/application_form.png" alt="application_form">
+                            </div>
+                            <div class="project__card--text">
+                                <h3 class="project__card--text_title text_title">Application Form</h3>
+                                <p class="project__card--text_title_sub">DOSE</p>
+                                <p>
+                                    Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quae facilis unde saepe
+                                    dolores
+                                    ullam, odio placeat, dolorem eos corporis quisquam doloribus dolore, earum eveniet
+                                    cupiditate dicta facere explicabo dignissimos esse.
+                                </p>
+                                <div class="project__card--tags">
+                                    <div class="tag">
+                                        PHP
+                                    </div>
+                                    <div class="tag">
+                                        CSS
+                                    </div>
+                                    <div class="tag">
+                                        Javascript
+                                    </div>
+                                    <div class="tag">
+                                        Codeigniter
+                                    </div>
+                                </div>
+                            </div>
                         </div>
+                    </a>
+                    <!-- Card -->
+                    <a href="#" class="project__link text__maincolor no_link">
+                        <div class="project__card">
+                            <div class="project__card--image">
+                                <img src="image/color pallete.png" alt="test">
+                            </div>
+                            <div class="project__card--text">
+                                <h3 class="project__card--text_title text_title">Title test</h3>
+                                <p class="project__card--text_title_sub">test</p>
+                                <p>
+                                    Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quae facilis unde saepe
+                                    dolores
+                                    ullam, odio placeat, dolorem eos corporis quisquam doloribus dolore, earum eveniet
+                                    cupiditate dicta facere explicabo dignissimos esse.
+                                </p>
+                                <div class="project__card--tags">
+                                    <div class="tag">
+                                        PHP
+                                    </div>
+                                    <div class="tag">
+                                        CSS
+                                    </div>
+                                    <div class="tag">
+                                        Javascript
+                                    </div>
+                                    <div class="tag">
+                                        Codeigniter
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <!--  -->
+                <!--  -->
+                <div class="footer">
+                    <div>
+                        <p>
+                            Coded in <a href="https://code.visualstudio.com/" target="_blank" class="text_title">Visual
+                                Studio Code</a> by yours truly.
+                            and deployed with <a href="https://github.com/" target="_blank"
+                                class="text_title">Github</a>.
+                        </p>
                     </div>
                 </div>
+                <!--  -->
             </div>
         </div>
     </div>
 </body>
 <script type="text/javascript">
-    var pos = document.documentElement;
-    pos.style.setProperty('--x', '50%')
-    pos.style.setProperty('--y', '50%')
-    pos.style.setProperty('--x2', '50%')
-    pos.style.setProperty('--y2', '50%')
-    pos.addEventListener('mousemove', e => {
-        pos.style.setProperty('--x', e.clientX + 'px')
-        pos.style.setProperty('--y', e.clientY + 'px')
-        pos.style.setProperty('--x2', e.clientX-150 + 'px')
-        pos.style.setProperty('--y2', e.clientY + 'px')
+    const doc = document.documentElement;
+    const navLi = document.querySelectorAll('.left__body--navbar li');
+    const section = document.querySelectorAll('.section');
+
+    // ------------ Set the location of the light
+    doc.style.setProperty('--x', '10%')
+    doc.style.setProperty('--y', '50%')
+    doc.addEventListener('mousemove', e => {
+        doc.style.setProperty('--x', e.clientX + 'px')
+        doc.style.setProperty('--y', e.clientY + 'px')
     })
+    // ------------ Change active navbar on scroll
+    window.addEventListener('scroll', () => {
+        let id = '';
+        let id_store = '';
+        // Loop for getting ID 
+
+        console.log(id_store);
+        section.forEach(section => {
+            let sectionTop = section.offsetTop;
+            // console.log(scrollY + '  --  ' + sectionTop)
+            if (scrollY >= sectionTop) {
+                id = section.getAttribute('id');
+                // console.log(section.getAttribute('id'));
+            }
+        })
+        // console.log(id)
+        // DITO SA TAAS LNG DAPAT NG DIV
+        // console.log(id)
+        if (id != '') {
+            // console.log(id + ' id 1 ' +id_stack);
+
+            if (id != id_store) {
+                id_store = id;
+                // console.log(id + ' ---  ' +id_store);
+                remove_active('navbar--' + id);
+            }
+        }
+    })
+
+    // ------------ Change active of the navbar
+
+    // var test = document.getElementById('navbar--active');
+    // test.classList.remove('navbar--about');
+    // console.log(test.classList.contains('navbar--about'));
+    // console.log(document.querySelectorAll('.left__body--navbar li'))
+    function remove_active(id) {
+        // console.log(id);
+
+        // ------------ Removes all active navbar for every li it scans
+        navLi.forEach(li => {
+            // console.log(li.classList.contains('navbar--active'));
+            if (li.classList.contains('navbar--active')) {
+                li.classList.remove('navbar--active');
+            }
+        });
+        // document.getElementById('navbar--about').classList.remove('navbar--active');
+        document.getElementById(id).classList.add('navbar--active');
+    }
+    // document.getElementsByClassName('no_link').href="javascript:void(0)";
+    document.getElementsByClassName('no_link').setAttribute("href", "javascript:void(0)");
+
 </script>
 
 </html>
