@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About Me</title>
+    <title>I'm John Bryan</title>
 </head>
 <style>
     :root {
@@ -333,6 +333,10 @@
         } */
     }
 
+    .section:not(:first-child) {
+        padding-top: 70px;
+    }
+
     /* Hovering Blur */
     .section--card__hover--opacity a {
         transition: 400ms;
@@ -364,17 +368,14 @@
     }
 
     .project__card--image img {
-        /* max-width: 200px; */
-        width: 100%;
         border: 2px solid rgb(191 191 191 / 0%);
         border-radius: 7px;
         /* transition: all ease-in-out .2s; */
-        /* max-width: 173px;
-        max-height: 99px; */
-        max-width: 800px;
-        max-height: 450px;
+
+        width: 100%;
+        max-width: 165px;
         min-width: 164px;
-        min-height: 84px;
+        max-height: 450px;
     }
 
 
@@ -416,7 +417,7 @@
         border-radius: 15px;
         color: var(--tagColor);
         font-weight: bolder;
-        margin: 0 4px;
+        margin: 4px;
         font-size: .8em;
         box-shadow: 0px 0px 5px rgba(46, 46, 46, .3);
     }
@@ -491,6 +492,12 @@
             width: auto;
             padding: 10px;
         }
+
+        .project__card--image img {
+            max-width: 330px;
+            min-width: 250px;
+            max-height: 450px;
+        }
     }
 
     @media only screen and (max-width:670px) {
@@ -515,6 +522,7 @@
             font-weight: bolder;
             font-size: 1.2rem;
         } */
+
 
     }
 
@@ -610,27 +618,37 @@
                         realities is what I find most intriguing about web development. Over the years, I've honed my
                         skills in front-end and back-end technologies like HTML, CSS, JavaScript, and PHP.
                     </p>
+                    <p>
+                        I appreciate you visiting my webpage. Please feel free to look through my portfolio and get in
+                        touch if you have any questions or would want to discuss a project or share your ideas.
+                        Together, let's make your web vision a reality.
+                    </p>
+                    <!-- <p>
+                        I'm grateful that you came to my website. Please feel free to go over my portfolio and get in
+                        touch with me if you have any questions, suggestions, or would want to discuss a project. Come
+                        with me as we create your web vision!
+                    </p> -->
                 </div>
                 <!-- about -->
                 <!-- experience -->
                 <div class="experience section section--card__hover--opacity" id="experience">
                     <div class="experience__title text_title navbar__title">EXPERIENCE</div>
                     <!-- Card -->
-                    <a href="#" class="experience__link text__maincolor">
+                    <a href="#" class="experience__link text__maincolor no_link">
                         <div class="experience__card">
                             <div class="experience__card--year text__title--subs text__info">
-                                FEB 2023 - FEB 2023
+                                FEB 2021 - FEB 2023
                             </div>
                             <div class="experience__card--text">
                                 <h3 class="experience__card--text_title text_title">Web Development Engineer</h3>
                                 <p class="experience__card--text_title_sub">St.Dominic College of Asia</p>
                                 <div class="text__info">
                                     <p>
-                                        Developed various websites for Student and Employees using Codeigniter 3
-                                        Framework.
+                                        Used the Codeigniter 3 Framework to create a variety of websites for students
+                                        and staff.
                                     </p>
                                     <p>
-                                        Convert all old system(.NET) modules to Web based System.
+                                        Recreate all previous system modules (.NET) into a web-based system.
                                     </p>
 
                                     <p>
@@ -700,19 +718,18 @@
                 <div class="project section section--card__hover--opacity" id="project">
                     <div class="project__title text_title navbar__title">PROJECT</div>
                     <!-- Card -->
-                    <a href="#" class="project__link text__maincolor">
+                    <a href="https://stdominiccollege.edu.ph/Onestop/" class="project__link text__maincolor"
+                        target="_blank">
                         <div class="project__card">
                             <div class="project__card--image">
                                 <img src="image/onestop.png" alt="onestop">
                             </div>
                             <div class="project__card--text">
-                                <h3 class="project__card--text_title text_title">Addmission Portal</h3>
-                                <p class="project__card--text_title_sub">Onestop · DOSE</p>
+                                <h3 class="project__card--text_title text_title">Admission Portal</h3>
+                                <p class="project__card--text_title_sub">Onestop · DOSE · Co-op</p>
                                 <p>
-                                    Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quae facilis unde saepe
-                                    dolores
-                                    ullam, odio placeat, dolorem eos corporis quisquam doloribus dolore, earum eveniet
-                                    cupiditate dicta facere explicabo dignissimos esse.
+                                    collaborated with our three-person team to develop a one-stop enrollment solution
+                                    that allows students to sign up independently.
                                 </p>
                                 <div class="project__card--tags">
                                     <div class="tag">
@@ -727,24 +744,63 @@
                                     <div class="tag">
                                         CodeIgniter
                                     </div>
+                                    <div class="tag">
+                                        JQuery
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+
+
+                    <!-- Card -->
+                    <a href="https://stdominiccollege.edu.ph/WEBDOSE" class="project__link text__maincolor"
+                        target="_blank">
+                        <div class="project__card">
+                            <div class="project__card--image">
+                                <img src="image/webdose.png" alt="test">
+                            </div>
+                            <div class="project__card--text">
+                                <h3 class="project__card--text_title text_title">WebDose</h3>
+                                <p class="project__card--text_title_sub">Maintenance · Update · Co-op</p>
+                                <p>
+                                    For convenient access from locations other than the premises, all modules from the
+                                    local system have been converted to a web-based system.
+                                </p>
+                                <div class="project__card--tags">
+                                    <div class="tag">
+                                        PHP
+                                    </div>
+                                    <div class="tag">
+                                        CSS
+                                    </div>
+                                    <div class="tag">
+                                        Javascript
+                                    </div>
+                                    <div class="tag">
+                                        Codeigniter
+                                    </div>
+                                    <div class="tag">
+                                        JQuery
+                                    </div>
                                 </div>
                             </div>
                         </div>
                     </a>
                     <!-- Card -->
-                    <a href="#" class="project__link text__maincolor">
+                    <a href="https://stdominiccollege.edu.ph/DOSE/" class="project__link text__maincolor"
+                        target="_blank">
                         <div class="project__card">
                             <div class="project__card--image">
                                 <img src="image/application_form.png" alt="application_form">
                             </div>
                             <div class="project__card--text">
                                 <h3 class="project__card--text_title text_title">Application Form</h3>
-                                <p class="project__card--text_title_sub">DOSE</p>
+                                <p class="project__card--text_title_sub">DOSE · Co-op</p>
                                 <p>
-                                    Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quae facilis unde saepe
-                                    dolores
-                                    ullam, odio placeat, dolorem eos corporis quisquam doloribus dolore, earum eveniet
-                                    cupiditate dicta facere explicabo dignissimos esse.
+                                    <!-- Various forms that enrollees can use to submit their enrollment applications. -->
+                                    Various forms that applicants can use to submit their personal data for the
+                                    admissions process.
                                 </p>
                                 <div class="project__card--tags">
                                     <div class="tag">
@@ -758,25 +814,27 @@
                                     </div>
                                     <div class="tag">
                                         Codeigniter
+                                    </div>
+                                    <div class="tag">
+                                        JQuery
                                     </div>
                                 </div>
                             </div>
                         </div>
                     </a>
                     <!-- Card -->
-                    <a href="#" class="project__link text__maincolor no_link">
+                    <a href="https://stdominiccollege.edu.ph/sdcap/index.php" class="project__link text__maincolor"
+                        target="_blank">
                         <div class="project__card">
                             <div class="project__card--image">
-                                <img src="image/color pallete.png" alt="test">
+                                <img src="image/portal.png" alt="test">
                             </div>
                             <div class="project__card--text">
-                                <h3 class="project__card--text_title text_title">Title test</h3>
-                                <p class="project__card--text_title_sub">test</p>
+                                <h3 class="project__card--text_title text_title">Student Portal</h3>
+                                <p class="project__card--text_title_sub">Maintenance · Update</p>
                                 <p>
-                                    Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quae facilis unde saepe
-                                    dolores
-                                    ullam, odio placeat, dolorem eos corporis quisquam doloribus dolore, earum eveniet
-                                    cupiditate dicta facere explicabo dignissimos esse.
+                                    I've been entrusted with maintaining this system and adding and updating various
+                                    features so that students can view their academic progress.
                                 </p>
                                 <div class="project__card--tags">
                                     <div class="tag">
@@ -790,6 +848,9 @@
                                     </div>
                                     <div class="tag">
                                         Codeigniter
+                                    </div>
+                                    <div class="tag">
+                                        JQuery
                                     </div>
                                 </div>
                             </div>
@@ -816,6 +877,7 @@
 <script type="text/javascript">
     const doc = document.documentElement;
     const navLi = document.querySelectorAll('.left__body--navbar li');
+    console.log(navLi)
     const section = document.querySelectorAll('.section');
 
     // ------------ Set the location of the light
@@ -841,8 +903,6 @@
             }
         })
         // console.log(id)
-        // DITO SA TAAS LNG DAPAT NG DIV
-        // console.log(id)
         if (id != '') {
             // console.log(id + ' id 1 ' +id_stack);
 
@@ -853,6 +913,9 @@
             }
         }
     })
+    // window.addEventListener('mousemove', function () {
+    //     console.log(scrollX);
+    // });
 
     // ------------ Change active of the navbar
 
@@ -874,7 +937,18 @@
         document.getElementById(id).classList.add('navbar--active');
     }
     // document.getElementsByClassName('no_link').href="javascript:void(0)";
-    document.getElementsByClassName('no_link').setAttribute("href", "javascript:void(0)");
+
+    // document.getElementsByClassName('no_link').href = "javascript:void(0)";
+    // console.log(document.getElementsByClassName('no_link'))
+    // console.log(no_link)
+
+    // ------------ Change all href and target that has no_link class
+    let no_link = document.getElementsByClassName('no_link');
+    Array.from(no_link).forEach(tag => {
+        // console.log(tag);
+        tag.href = "JavaScript:void(0);";
+        tag.removeAttribute("target");
+    })
 
 </script>
 
