@@ -1,0 +1,836 @@
+<!-- Portfolio Version 3 -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    :root {
+        /* <!-- Colors --> */
+        --color_main: #ffe59e;
+        --color_main-sub: #ffe59ea4;
+        --color_highligt: #ffc962;
+        --color_active: #ff8f00;
+        --color_backGround: #2f2822;
+        --color_backGround-light: #85552b;
+        --color_tag-backGround: #6f3e00e8;
+        --color_tag-color: #ff8f00;
+
+        /* <!-- Main Card Size --> */
+        --main_card-width: 1024px;
+        --main_card-padding: 50px;
+
+    }
+
+    /* hr {
+        line-height: 1em;
+        position: relative;
+        outline: 0;
+        border: 0;
+        color: black;
+        text-align: center;
+        height: 1.5em;
+        opacity: .5;
+
+        &:before {
+            content: '';
+            background: linear-gradient(to right, transparent, #818078, transparent);
+            position: absolute;
+            left: 0;
+            top: 50%;
+            width: 100%;
+            height: 1px;
+        }
+
+        &:after {
+            content: attr(data-content);
+            position: relative;
+            display: inline-block;
+            color: black;
+
+            padding: 0 .5em;
+            line-height: 1.5em;
+            color: #818078;
+            background-color: var(--color_backGround);
+        }
+    } */
+
+    html,
+    body {
+        background-color: black;
+        padding: 0;
+        margin: 0;
+        color: var(--color_main);
+        font-family: helvetica;
+        background-color: var(--color_backGround);
+        /* Change color speed */
+        transition: all 1s ease-out;
+    }
+
+    a {
+        text-decoration: none;
+    }
+
+    .highlight {
+        color: var(--color_highligt);
+    }
+
+    .active {
+        color: var(--color_active);
+    }
+
+    .midSection {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .navbar {
+        height: 50px;
+        width: 100%;
+    }
+
+    .change_color {
+        width: 50px;
+        height: 50px;
+        position: fixed;
+        top: 10vh;
+        right: 0;
+        border-radius: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        /* overflow: hidden; */
+
+        z-index: 2;
+
+        &>img {
+            width: 80%;
+            height: 80%;
+        }
+
+        & .popup {
+            z-index: -1;
+            position: relative;
+
+            &>div {
+                width: 50px;
+                height: 50px;
+                position: fixed;
+                top: 10vh;
+                right: 0;
+                border-radius: 50%;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                background-color: aliceblue;
+                position: absolute;
+                transition: all .5s ease-in-out;
+                overflow: hidden;
+
+                & img {
+                    width: 100%;
+                    height: 100%;
+                }
+            }
+
+            & .popup-1 {
+                top: 35px;
+                right: 0px;
+
+            }
+
+            & .popup-2 {
+
+                top: 5px;
+                right: 50px;
+            }
+
+            & .popup-3 {
+                top: -54px;
+                right: 50px;
+            }
+
+            & .popup-4 {
+                top: -85px;
+                right: 0;
+            }
+        }
+
+        .change_color_background {
+            width: 100%;
+            height: 100%;
+            background-color: var(--color_active);
+            position: absolute;
+            z-index: -1;
+            border-radius: 50%;
+        }
+
+
+    }
+
+    .div_tag {
+        display: flex;
+        flex-wrap: wrap;
+
+        & .tag {
+            color: var(--color_tag-color);
+            background-color: var(--color_tag-backGround);
+            padding: 6px 12px;
+            border-radius: 15px;
+            margin: 4px;
+            font-size: .8em;
+            box-shadow: 0px 0px 5px rgba(46, 46, 46, .3);
+            font-weight: bolder;
+            height: fit-content;
+        }
+
+    }
+
+    .midSection__card {
+        /* background-color: var(--color_backGround); */
+        width: calc(var(--main_card-width) - var(--main_card-padding));
+        padding: var(--main_card-padding);
+        /* height: 100000px; */
+
+        & .intro {
+            & .name {
+                font-size: 40px;
+                font-weight: bold;
+            }
+
+            & .name-sub {
+                font-size: 20px;
+                color: var(--color_main-sub);
+            }
+
+            & .role {
+                font-size: 20px;
+
+                margin: 20px 0px 20px 0px;
+            }
+
+            & .desc {
+                color: var(--color_main-sub);
+                margin-bottom: 50px;
+
+                & span {
+                    padding-left: 10px;
+                }
+            }
+
+        }
+
+        & section:not(:first-child) {
+            padding: 15px;
+
+            /* Tabs */
+            &>p:first-child {
+                color: var(--color_highligt);
+                font-weight: bold;
+                font-size: 15px;
+                /* display: inline; */
+                margin: 0;
+                margin-bottom: 20px;
+                /* background-color: var(--color_backGround); */
+                /* background-color: beige; */
+
+                /* Lines */
+                &::before {
+                    content: " ";
+                    height: 1px;
+                    width: 90%;
+                    /* background: red; */
+                    display: block;
+                    position: relative;
+                    top: 10px;
+                    background: linear-gradient(to right, rgb(129, 128, 120) 80%, transparent 100%);
+                    opacity: .4;
+                }
+
+                &::after,
+                span {
+                    content: " ";
+                    background-color: var(--color_backGround);
+                    position: relative;
+                    z-index: 1;
+                    padding-right: 5px;
+
+                }
+            }
+        }
+
+        & .about {}
+
+        & .experience {
+            & .experience__card {
+                padding: 20px;
+                border-radius: 7px;
+
+                display: flex;
+                flex-wrap: nowrap;
+                align-items: baseline;
+
+                & .experience__card--year {
+                    min-width: 120px;
+                    max-width: 120px;
+                    padding-right: 20px;
+                    font-weight: bold;
+                    color: var(--color_main-sub);
+
+
+                }
+
+                & .experience__card--description {
+
+                    /* Title */
+                    &>p:first-child {
+                        color: var(--color_highligt);
+                        font-weight: bolder;
+                        margin-bottom: 0;
+                    }
+
+                    /* Sub Title */
+                    &>p:nth-child(2) {
+                        color: var(--color_main-sub);
+                        /* color: #ff8f00; */
+                        margin-top: 0;
+                    }
+
+                    &>div {
+                        padding: 0px 15px;
+                        color: var(--color_main);
+
+
+                    }
+                }
+
+                &:hover {
+                    background: linear-gradient(180deg, rgba(255, 255, 255, .1) 100%, rgba(255, 255, 255, .1) 100%);
+                    box-shadow: 0px 0px 3px rgba(46, 46, 46, 0.250), inset 0px 2px 5px 0 rgba(255, 255, 255, .4), inset 0px -1px 2px 0 rgba(0, 0, 0, .2);
+                }
+            }
+        }
+
+        & .projects {
+            & .projects_container {
+                width: 100%;
+                /* use to have 2 column not using display flex */
+                column-count: 2;
+            }
+
+            & .projects_card {
+                height: auto;
+                /* Add max and min for card one specific size */
+                max-width: 460px;
+                max-height: 520px;
+
+                border-radius: 10px;
+
+                margin-bottom: 15px;
+
+                /* Align all div */
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                overflow: hidden;
+                /* Use to make it parent of the child with absolute position */
+                position: relative;
+
+                & img {
+                    /* width: 100%;
+                    height: 100%; */
+                    width: 800px;
+                    /* object-fit: cover; */
+
+
+                }
+
+                & .projects_desc {
+                    opacity: 0;
+                    position: absolute;
+                    bottom: 0px;
+                    padding: 10px 20px 10px 20px;
+                    color: var(--color_main);
+
+                    background: linear-gradient(0deg, rgba(0, 0, 0, 0.727328431372549) 15%, rgba(0, 0, 0, 0.6432948179271709) 50%, rgba(0, 0, 0, 0.2007177871148459) 100%);
+                    height: 100%;
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: flex-end;
+                    transition: all .2s ease-out;
+
+                    /* font-size: 15px; */
+                    font-weight: 500;
+
+                    /* Add Animation upon hover*/
+                    &>div {
+                        transform: translateY(100px);
+                        transition: all .5s ease-out;
+                    }
+
+                    & .title {
+                        color: var(--color_highligt);
+                        font-size: 30px;
+                        font-weight: 600;
+                    }
+
+
+                }
+
+                /* hovering animation back to normal / Visible */
+                &:hover .projects_desc {
+                    opacity: 1;
+
+                    &>div {
+                        transform: translateY(0);
+                    }
+                }
+            }
+        }
+    }
+
+    .redirecting {
+        z-index: 9999;
+        position: fixed;
+        top: 0;
+        left: 0;
+        margin: 20px;
+        padding: 20px;
+        box-shadow: 0px 10px 10px 1px #00000045;
+        border-radius: 10px;
+        backdrop-filter: blur(10px);
+        -webkit-backdrop-filter: blur(10px);
+        border-radius: 20px;
+        border: 1px solid rgba(255, 255, 255, .18);
+        background: linear-gradient(135deg, rgba(255, 255, 255, .1), rgba(255, 255, 255, .0));
+        font-weight: bolder;
+    }
+
+    @media only screen and (max-width:1023px) {
+        /* .midSection {
+            display: block;
+        } */
+
+        .midSection__card {
+            width: auto;
+            padding: 30px;
+        }
+
+        & .projects {
+            & .projects_container {
+                column-count: 1 !important;
+
+                & .projects_card {
+                    max-width: none;
+                    max-height: none;
+                    width: 100%;
+
+                    & img {
+                        width: 100%;
+                        height: 400px;
+                        object-fit: cover;
+                    }
+
+
+                }
+            }
+        }
+    }
+
+
+
+    @media only screen and (max-width:767px) {
+        .midSection__card {
+            padding: 20px;
+        }
+
+
+    }
+
+    /* Custom */
+    @media only screen and (max-width:525px) {
+        .experience__card {
+            flex-direction: column !important;
+
+            & .experience__card--year {
+                max-width: none !important;
+            }
+        }
+
+        .projects_card {
+            flex-direction: column;
+
+            & img {
+                height: auto !important;
+                width: 100%;
+            }
+
+            & .projects_desc {
+                position: relative !important;
+                opacity: 1 !important;
+                background: var(--color_backGround-light) !important;
+
+                &>div {
+                    transform: translateY(0) !important;
+                }
+            }
+        }
+    }
+
+    @media only screen and (max-width:424px) {
+        .midSection__card {
+            padding: 10px;
+        }
+
+
+
+        .experience__card--year {
+            margin-bottom: 0px;
+        }
+    }
+
+    @media only screen and (max-width:319px) {
+        .experience__card {
+            padding: 0 10px 10px 10px !important;
+        }
+    }
+</style>
+
+<body>
+    <div class="change_color">
+
+        <img src="image/logo/JBv2.png" alt="">
+        <div class="popup">
+            <div class="popup-1">
+                <img src="image/color_palette/black.png" alt="">
+            </div>
+            <div class="popup-2">
+                <img src="image/color_palette/ocean.png" alt="">
+            </div>
+            <div class="popup-3">
+                <img src="image/color_palette/pink.png" alt="">
+            </div>
+            <div class="popup-4"></div>
+        </div>
+        <div class="change_color_background"></div>
+    </div>
+    <div class="navbar">
+        <!-- <input type="checkbox" name="" id="color_changing_test"> -->
+    </div>
+    <div class="midSection">
+        <div class="midSection__card">
+            <section class="intro">
+                <div class="name highlight">John Bryan Sampiano</div>
+                <div class="name-sub">but you can call me <span class=" highlight">BELL</span></div>
+                <div class="role highlight">Web Developer</div>
+                <div class="desc">As a web developer, building digital experiences is
+                    very close to my heart.</div>
+            </section>
+            <section class="about">
+                <p><span>ABOUT</span></p>
+                <p>I'm a web developer who has a strong passion for creating digital experiences. I've had the privilege
+                    of constructing web projects for a School to make things simple for students, from enrollment to
+                    subject management.</p>
+                <p>I began my career as a web developer when I recognised the magic of writing code that brings websites
+                    to life. The creative process of turning ideas into interactive, visually beautiful realities is
+                    what I find most intriguing about web development. Over the years, I've honed my skills in front-end
+                    and back-end technologies like HTML, CSS, JavaScript, and PHP.</p>
+                <p>I appreciate you visiting my webpage. Please feel free to look through my portfolio and get in touch
+                    if you have any questions or would want to discuss a project or share your ideas. Together, let's
+                    make your web vision a reality.</p>
+            </section>
+            <section class="experience">
+                <p><span>EXPERIENCE</span></p>
+                <a href="#" class="experience__card">
+                    <div class="experience__card--year">FEB 2021 - FEB 2023</div>
+                    <div class="experience__card--description">
+                        <p>Web Development Engineer</p>
+                        <p>St.Dominic College of Asia</p>
+                        <div>
+                            <p>
+                                Used the Codeigniter 3 Framework to create a variety of websites for students
+                                and staff.
+                            </p>
+                            <p>
+                                All prior system modules (.NET) should be converted to a web-based system.
+                            </p>
+
+                            <p>
+                                I am one of the programmers that construct the DOSE (Dominican One Stop
+                                Enrollment) / Admission portal, which students utilize to enroll themselves.
+                            </p>
+                            <p>
+                                When there is a system upgrade, works with the team to develop presentations for
+                                my task.
+                            </p>
+                            <div class="experience__card--description--footer div_tag">
+                                <div class="tag">CodeIgniter</div>
+                                <div class="tag">PHP</div>
+                                <div class="tag">SCSS/CSS</div>
+                                <div class="tag">Javascript</div>
+                                <div class="tag">JQuery</div>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+                <a href="#" class="experience__card">
+                    <div class="experience__card--year">FEB 2021 - FEB 2023</div>
+                    <div class="experience__card--description">
+                        <p>Intern : Web Developer</p>
+                        <p>TSPG IT Solutions</p>
+                        <div>
+                            <p>
+                                Developed different websites with software division team for clients using Symfony 3
+                                framework.
+                            </p>
+                            <div class="experience__card--description--footer div_tag">
+                                <div class="tag">Symfony</div>
+                                <div class="tag">PHP</div>
+                                <div class="tag">SCSS/CSS</div>
+                                <div class="tag">Javascript</div>
+                                <div class="tag">JQuery</div>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+
+            </section>
+            <section class="projects">
+                <p><span>PROJECTS</span></p>
+                <div class="projects_container">
+                    <div class="projects_card">
+                        <img src="image/onestop.png" alt="">
+                        <div class="projects_desc">
+                            <div class="title">Admission Portal</div>
+                            <div class="title_sub">Onestop · DOSE · Co-op</div>
+                            <div>
+                                Collaborated with our three-person team to develop a one-stop enrollment solution that
+                                allows students to sign up independently.
+                            </div>
+                            <div class="div_tag">
+                                <div class="tag">PHP</div>
+                                <div class="tag">CSS</div>
+                                <div class="tag">JavaScript</div>
+                                <div class="tag">CodeIgniter</div>
+                                <div class="tag">JQuery</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="projects_card">
+                        <img src="image/webdose.png" alt="">
+                        <div class="projects_desc">
+                            <div class="title">WebDose</div>
+                            <div class="title_sub">Maintenance · Update · Co-op</div>
+                            <div>
+                                For convenient access from locations other than the premises, all modules from the local
+                                system have been converted to a web-based system.
+                            </div>
+                            <div class="div_tag">
+                                <div class="tag">PHP</div>
+                                <div class="tag">CSS</div>
+                                <div class="tag">JavaScript</div>
+                                <div class="tag">CodeIgniter</div>
+                                <div class="tag">JQuery</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="projects_card">
+                        <img src="image/application_form.png" alt="">
+                        <div class="projects_desc">
+                            <div class="title">Application Form</div>
+                            <div class="title_sub">DOSE · Co-op</div>
+                            <div>
+                                Various forms that applicants can use to submit their personal data for the admissions
+                                process.
+                            </div>
+                            <div class="div_tag">
+                                <div class="tag">PHP</div>
+                                <div class="tag">CSS</div>
+                                <div class="tag">JavaScript</div>
+                                <div class="tag">CodeIgniter</div>
+                                <div class="tag">JQuery</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="projects_card">
+                        <img src="image/portal.png" alt="">
+                        <div class="projects_desc">
+                            <div class="title">Student Portal</div>
+                            <div class="title_sub">Maintenance · Update</div>
+                            <div>
+                                I've been entrusted with maintaining this system and adding and updating various
+                                features so that students can view their academic progress.
+                            </div>
+                            <div class="div_tag">
+                                <div class="tag">PHP</div>
+                                <div class="tag">CSS</div>
+                                <div class="tag">JavaScript</div>
+                                <div class="tag">CodeIgniter</div>
+                                <div class="tag">JQuery</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="projects_card">
+                        <img src="image/manipis.png" alt="">
+                        <div class="projects_desc">
+                            <div class="title">Manipis Lying in Clinic</div>
+                            <div class="title_sub">Capstone Project</div>
+                            <div>
+                                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quos facilis perspiciatis
+                                voluptate, odit, exercitationem earum porro velit accusantium nisi nostrum et dolorem
+                                possimus assumenda natus dignissimos maxime esse, quaerat explicabo.
+                            </div>
+                            <div class="div_tag">
+                                <div class="tag">PHP</div>
+                                <div class="tag">CSS</div>
+                                <div class="tag">JavaScript</div>
+                                <div class="tag">JQuery</div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- <div class="projects_card">
+                        <img src="image/felix the cat.gif" alt="">
+                    </div> -->
+                    <!-- <div class="projects_card">
+
+                    </div> -->
+                </div>
+            </section>
+        </div>
+    </div>
+    <div class="redirecting">
+        Redirecting to REACT project portfolio in <span class="timer"></span>
+    </div>
+</body>
+<script>
+    let count = 10;
+    var timerID = setInterval(() => {
+        
+        count--;
+        document.querySelector('.timer').textContent = count;
+        // count == 0 ? window.location.href = "https://brysampi.github.io" : '';
+        console.log(count)
+
+    }, 1000);
+    // alert('Redirecting to REACT project portfolio in '+count);
+
+    var pos = document.documentElement;
+    const change_color = document.querySelector('.change_color');
+    const change_color_selector = [
+        document.querySelector('.popup-1'),
+        document.querySelector('.popup-2'),
+        document.querySelector('.popup-3'),
+        document.querySelector('.popup-4')
+    ]
+
+    change_color_default(change_color_selector);
+
+    // var switch_toggle = document.getElementById('color_changing_test');
+    // switch_toggle.addEventListener("change", (event) => {
+    //     // console.log(switch_toggle.checked)
+    //     if (switch_toggle.checked) {
+    //         // console.log('checked')
+    //         // setPinkStyle();
+    //         setBlackStyle();
+
+    //     } else {
+    //         setDefaultStyle()
+    //     }
+    // });
+
+    document.querySelector('.popup-1').addEventListener('click', (event) => {
+        setBlackStyle();
+    })
+    document.querySelector('.popup-2').addEventListener('click', (event) => {
+        setOceanStyle();
+    })
+    document.querySelector('.popup-3').addEventListener('click', (event) => {
+        setPinkStyle();
+    })
+    document.querySelector('.popup-4').addEventListener('click', (event) => {
+        setDefaultStyle();
+    })
+
+
+    change_color.addEventListener("click", (event) => {
+
+        if (change_color.classList.contains('active')) {
+            // console.log('change');
+
+            change_color_default(change_color_selector)
+
+            change_color.classList.remove('active');
+        } else {
+            // console.log('return');
+
+            change_color_expand(change_color_selector)
+
+            change_color.classList.add('active');
+        }
+    })
+
+    function change_color_default(change_color_selector) {
+        change_color_selector.forEach((item) => {
+            // console.log(item.style);
+            item.style.setProperty('width', '20px');
+            item.style.setProperty('height', '20px');
+            item.style.setProperty('top', '-10px');
+            item.style.setProperty('right', '10px');
+        })
+    }
+    function change_color_expand() {
+        change_color_selector.forEach((item) => {
+            // console.log(item.style);
+            item.style.setProperty('width', '');
+            item.style.setProperty('height', '');
+            item.style.setProperty('top', '');
+            item.style.setProperty('right', '');
+        })
+    }
+    function setDefaultStyle() {
+        pos.style.setProperty('--color_main', '#ffe59e')
+        pos.style.setProperty('--color_main-sub', '#ffe59ea4')
+        pos.style.setProperty('--color_highligt', '#ffc962')
+        pos.style.setProperty('--color_active', '#ff8f00')
+        pos.style.setProperty('--color_backGround', '#2f2822')
+        pos.style.setProperty('--color_backGround-light', '#85552b')
+        pos.style.setProperty('--color_tag-backGround', '#6f3e00e8')
+        pos.style.setProperty('--color_tag-color', '#ff8f00')
+    }
+    function setPinkStyle() {
+        pos.style.setProperty('--color_main', '#FF9BD2')
+        pos.style.setProperty('--color_main-sub', '#f37cb7d6')
+        pos.style.setProperty('--color_highligt', '#D63484')
+        pos.style.setProperty('--color_active', '#D63484')
+        pos.style.setProperty('--color_backGround', '#402B3A')
+        pos.style.setProperty('--color_backGround-light', '#59314d')
+        pos.style.setProperty('--color_tag-backGround', '#F8F4EC')
+        pos.style.setProperty('--color_tag-color', '#D63484')
+    }
+    function setBlackStyle() {
+        pos.style.setProperty('--color_main', '#CCC8AA')
+        pos.style.setProperty('--color_main-sub', '#7D7C7C')
+        pos.style.setProperty('--color_highligt', '#F1EFEF')
+        pos.style.setProperty('--color_active', '#F1EFEF')
+        pos.style.setProperty('--color_backGround', '#191717')
+        pos.style.setProperty('--color_backGround-light', '#393939')
+        pos.style.setProperty('--color_tag-backGround', '#7D7C7C')
+        pos.style.setProperty('--color_tag-color', '#F1EFEF')
+    }
+    function setOceanStyle() {
+        pos.style.setProperty('--color_main', '#9EC8B9')
+        pos.style.setProperty('--color_main-sub', '#899d96')
+        pos.style.setProperty('--color_highligt', '#3bcf9a')
+        pos.style.setProperty('--color_active', '#3bcf9a')
+        pos.style.setProperty('--color_backGround', '#092635')
+        pos.style.setProperty('--color_backGround-light', '#003d5d')
+        pos.style.setProperty('--color_tag-backGround', '#035135')
+        pos.style.setProperty('--color_tag-color', '#3bcf9a')
+    }
+</script>
+
+</html>

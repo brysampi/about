@@ -1,3 +1,4 @@
+<!-- Portfolio Version 2 -->
 <!DOCTYPE html>
 <html lang="en">
 
@@ -427,6 +428,22 @@
     .footer {
         margin: 100px 0;
     }
+    .redirecting {
+        z-index: 9999;
+        position: fixed;
+        top: 0;
+        right: 0;
+        margin: 20px;
+        padding: 20px;
+        box-shadow: 0px 10px 10px 1px #00000045;
+        border-radius: 10px;
+        backdrop-filter: blur(10px);
+        -webkit-backdrop-filter: blur(10px);
+        border-radius: 20px;
+        border: 1px solid rgba(255, 255, 255, .18);
+        background: linear-gradient(135deg, rgba(255, 255, 255, .1), rgba(255, 255, 255, .0));
+        font-weight: bolder;
+    }
 
 
     @media only screen and (max-width:1040px) {
@@ -482,7 +499,7 @@
 
         .left__body {
             width: 87vw;
-            padding: 20px;
+            /* padding: 20px; */
         }
 
         .container__body--right {
@@ -982,8 +999,20 @@
             </div>
         </div>
     </div>
+    <div class="redirecting">
+        Redirecting to REACT project portfolio in <span class="timer"></span>
+    </div>
 </body>
 <script type="text/javascript">
+    let count = 10;
+    var timerID = setInterval(() => {
+        
+        count--;
+        document.querySelector('.timer').textContent = count;
+        count == 0 ? window.location.href = "https://brysampi.github.io" : '';
+        console.log(count)
+
+    }, 1000);
     const doc = document.documentElement;
     const navLi = document.querySelectorAll('.left__body--navbar li');
     console.log(navLi)
